@@ -1,0 +1,176 @@
+a,
+a:hover,
+a:active,
+a:focus,
+a:focus:active {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav {
+	position: fixed;
+	width: 250px;
+	height: 100vh;
+	background-color: black;
+	color: rgb(210, 210, 210);
+	transition: width .4s;
+}
+
+nav.closed {
+	width: 55px;
+	transition: width .4s;
+}
+
+nav > * {
+	width: 100%;
+}
+
+nav > #nav-toggle {
+	text-align: right;
+	padding: .2mm 5px;
+	margin: 0;
+	transition: padding .4s;
+}
+
+nav.closed > #nav-toggle {
+	padding: .2mm 18px;
+	padding-left: 0;
+	transition: padding .4s;
+}
+
+nav > #nav-toggle > i {
+	cursor: pointer;
+}
+
+nav > .profile {
+	display: table;
+	width: 250px;
+	height: 75px;
+	margin-bottom: 20px;
+	transition: height .4s;
+}
+
+nav.closed > .profile{
+	height: 50px;
+	transition: height .4s;
+}
+
+nav > .profile > .user-photo {
+	display: table-cell;
+	width: 75px;
+	height: 100%;
+	border-radius: 100%;
+	background-color: purple;
+	transition: width .4s;
+}
+
+nav.closed > .profile > .user-photo {
+	width: 45px;
+	transition: width .4s;
+}
+
+nav > .profile > .user-name {
+	display: table-cell;
+	width: 175px;
+	text-align: center;
+	vertical-align: middle;
+	transition: opacity .4s;
+}
+
+nav.closed > .profile > .user-name {
+	opacity: 0;
+	transition: opacity .4s;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul > li > a {
+	display: block;
+	padding: 0;
+}
+
+nav ul > li > a > div {
+	display: table;
+	width: 250px;
+	transition: width .4s;
+}
+
+nav.closed ul > li > a > div {
+	width: 55px;
+	transition: width .4s;
+}
+
+nav ul > li > a > div > * {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+nav ul > li > a > div > i {
+	width: 50px;
+	padding: 5px 12px;
+	transition: width .4s;
+}
+
+nav.closed ul > li > a > div > i {
+	width: 0px;
+	transition: width .4s;
+}
+
+nav ul > li > a > div > span {
+	width: 200px;
+}
+
+nav.closed ul > li > a > div > span {
+	display: none;
+}
+
+nav ul > li > a:hover > div,
+nav ul > li > i:hover:parent(), {
+	background-color: rgb(100, 100, 100);
+}
+
+nav ul > li:hover {
+	cursor: pointer;
+}
+
+nav > ul.down {
+	position: absolute;
+	bottom: 0;
+}
+
+ul > li ul {
+	max-height: 0;
+	height: 100%;
+	overflow: hidden;
+	transition: max-height .4s;
+}
+
+ul > li ul.show {
+	max-height: 10000px;
+	transition: max-height .4s;
+}
+
+ul > li ul div {
+	padding-left: 25px;
+}
+
+#toggle-menu {
+	position: absolute;
+	transform: translate(220px, -40px);
+	transition: transform .4s;
+}
+
+
+nav .down-caret {
+	transform: translate(220px, -40px) rotate(180deg)!important;
+	transition: transform .4s;
+}
+
+nav.closed .down-caret {
+	display: none;
+}
